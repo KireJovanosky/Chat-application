@@ -14,25 +14,25 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserService service;
+    private final UserService userService;
 
     @MessageMapping("/user.addUser")
-    @SendTo("/user/topic")
+    @SendTo("/user/public")
     public User addUser(@Payload User user) {
-        service.saveUser(user);
+        userService.saveUser(user);
         return user;
     }
 
     @MessageMapping("/user.disconnectUser")
-    @SendTo("/user/topic")
-    public User disconnect (@Payload User user) {
-        service.disconnect(user);
+    @SendTo("/user/public")
+    public User disconnectUser(@Payload User user) {
+        userService.disconnect(user);
         return user;
     }
 
     @GetMapping("/users")
     public ResponseEntity<List<User>> findConnectedUsers() {
-        return ResponseEntity.ok(service.findConnectedUsers());
+        return ResponseEntity.ok(userService.findConnectedUsers());
     }
 
 }
