@@ -21,7 +21,7 @@ Spring boot **one-on-one chat application** that ensures private, secure convers
 
 ## Installation
 
-Step-by-step instructions on how to install and set up your project locally.
+Step-by-step instructions on how to install and set up the project locally.
 
 ```bash
 # Clone the repository
