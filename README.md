@@ -45,6 +45,7 @@ This project is implemented using the following technologies
 - Websocket
 - Spring Boot 3.x.x
 - MongoDB
+- Docker
 - Javascript
 - HTML
 - CSS
